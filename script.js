@@ -32,6 +32,30 @@ navLinks.forEach((link) => {
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const body = document.body;
 
+//Cek Status dark mode dari localStorage saat halaman dibuat
+
+if (localStorage.getItem("darkModeEnabled") === "true") {
+  enableDarkMode();
+}
+
+// fungsi untuk mengaktifkan dark mode
+
+function enableDarkMode() {
+  body.classList.add("dark-mode");
+  localStorage.setItem("darkModeEnabled", "true");
+}
+
+// fungsi untuk mengnonaktifkan dark mode
+
+function disableDarkMode() {
+  body.classList.remove("dark-mode");
+  localStorage.setItem("darkModeEnabled", "false");
+}
+
 darkModeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
+  if (body.classList.contains("dark-mode")) {
+    disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
 });
