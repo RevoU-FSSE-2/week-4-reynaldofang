@@ -14,6 +14,135 @@ If you want to follow me on social media, you can directly click the link below.
 
 https://www.reynaldofang.site/
 
+## How to clone repo until running your computer
+
+### Download Repositories
+
+Download the repository onto your computer using the `git clone` command. The repository url can be seen in the desired repository.
+
+```
+git clone <url repository> <folder>
+```
+
+### Update Repositories
+
+Update the repository that has been downloaded to the computer using the `git pull` command.
+
+```
+git pull origin <branch name>
+```
+
+### Uploading Changes
+
+Before pushing, don't forget to pull first.
+
+Add new file or change file
+
+```
+git add <file name>
+```
+
+Or you add new file or modify multiple files at once
+
+```
+git add .
+```
+
+Confirm file additions or changes
+
+```
+git commit -m "<commit messages>"
+```
+
+Submit changes to the repository
+
+```
+git push origin <branch name>
+```
+
+### Branching
+
+Branches are used to develop new features or change source code without impacting other branches. The master branch is the default branch of a repository. Use another branch to do development and merge it back into the master branch.
+
+#### View the branches contained in the local repository
+
+```
+git branch
+```
+
+#### Create a new branch in the local repository and send it to the remote repository
+
+**Make new Branch**
+
+```
+git branch <new branch name>
+```
+
+**Active the new branch**
+
+```
+git checkout <new branch name>
+```
+
+**Confirm file additions or changes**
+
+```
+git commit -m "<commit messages>"
+```
+
+**Submit changes to the repository**
+
+```
+git push origin <new branch name>
+```
+
+#### Merges another branch into the active branch
+
+**Activate the desired branch**
+
+```
+git checkout <branch name active>
+```
+
+**Update branch local**
+
+```
+git pull origin <branch name active>
+```
+
+**Merger File**
+
+```
+git merge <the name of the branch to be merged>
+```
+
+**Check and resolve conflicts due to merging branches**
+
+```
+git status
+```
+
+**Confirm and upload merging branches**
+
+```
+git commit -m "<commit messages>" -a
+git push origin <branch name active>
+```
+
+#### Delete Branch
+
+**On the remote repository**
+
+```
+git push origin :<branch name>
+```
+
+**In local repository**
+
+```
+git branch <nama branch> -d
+```
+
 ## Deploy Documention 💻⚙
 
 ### Buy Domain
